@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:id="@+id/mainContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/fabAndSnackbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fab and Snackbar"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_custom"
+        app:layout_constraintBottom_toTopOf="@+id/floatingToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/floatingToolbar"
+        app:layout_constraintStart_toStartOf="@+id/floatingToolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_custom"
+        android:id="@+id/floatingToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Floating Toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/collapsingToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/collapsingToolbar"
+        app:layout_constraintStart_toStartOf="@+id/collapsingToolbar"
+        app:layout_constraintTop_toBottomOf="@+id/fabAndSnackbar" />
+
+    <Button
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_custom"
+        android:id="@+id/collapsingToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Collapsing Toolbar"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/floatingToolbar" />
+
+    <Button
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="@color/white"
+        android:background="@drawable/button_custom"
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/collapsingToolbar" />
+</androidx.constraintlayout.widget.ConstraintLayout>
