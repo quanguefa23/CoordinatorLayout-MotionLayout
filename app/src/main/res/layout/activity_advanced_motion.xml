@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp">
+
+        <com.example.coordinatorlayout.entity.CollapsibleToolbar
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/motionLayout"
+            app:layoutDescription="@xml/scene_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="50dp"
+            android:background="@drawable/layout_gradient"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
+        </com.example.coordinatorlayout.entity.CollapsibleToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_scrolling" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

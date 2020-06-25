@@ -25,5 +25,11 @@ public class MainActivity extends AppCompatActivity {
 
         binding.collapsingToolbar.setOnClickListener(view ->
                 startActivity(new Intent(MainActivity.this, CollapsingToolbarActivity.class)));
+
+        binding.clwithml.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, ClWithMlActivity.class)));
+
+        binding.admotion.setOnClickListener(view ->
+                startActivity(new Intent(MainActivity.this, AdvancedMotionActivity.class)));
     }
 }
