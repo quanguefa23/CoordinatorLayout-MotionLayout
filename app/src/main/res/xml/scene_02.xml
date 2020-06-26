@@ -16,7 +16,7 @@
             android:id="@+id/image1"
             android:layout_width="48dp"
             android:layout_height="48dp"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginStart="32dp"
             android:layout_marginBottom="72dp"
             motion:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,7 @@
             android:id="@+id/image2"
             android:layout_height="48dp"
             android:layout_width="48dp"
-
+            motion:transitionEasing="decelerate"
             motion:layout_constraintBottom_toBottomOf="@+id/image1"
             motion:layout_constraintEnd_toStartOf="@+id/image3"
             motion:layout_constraintHorizontal_bias="0.5"
@@ -48,7 +48,7 @@
             android:id="@+id/image3"
             android:layout_height="48dp"
             android:layout_width="48dp"
-
+            motion:transitionEasing="decelerate"
             motion:layout_constraintBottom_toBottomOf="@+id/image2"
             motion:layout_constraintEnd_toStartOf="@+id/image4"
             motion:layout_constraintHorizontal_bias="0.5"
@@ -63,7 +63,7 @@
             android:id="@+id/image4"
             android:layout_height="48dp"
             android:layout_width="48dp"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginEnd="32dp"
             motion:layout_constraintBottom_toBottomOf="@+id/image3"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
             android:id="@+id/textView1"
             android:layout_width="64dp"
             android:layout_height="wrap_content"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginTop="8dp"
             motion:layout_constraintEnd_toEndOf="@+id/image1"
             motion:layout_constraintStart_toStartOf="@+id/image1"
@@ -96,7 +96,7 @@
             android:id="@+id/textView2"
             android:layout_width="72dp"
             android:layout_height="wrap_content"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginTop="8dp"
             motion:layout_constraintEnd_toEndOf="@+id/image2"
             motion:layout_constraintStart_toStartOf="@+id/image2"
@@ -113,7 +113,7 @@
             android:id="@+id/textView3"
             android:layout_width="64dp"
             android:layout_height="wrap_content"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginTop="8dp"
             motion:layout_constraintEnd_toEndOf="@+id/image3"
             motion:layout_constraintStart_toStartOf="@+id/image3"
@@ -130,7 +130,7 @@
             android:id="@+id/textView4"
             android:layout_width="64dp"
             android:layout_height="wrap_content"
-
+            motion:transitionEasing="decelerate"
             android:layout_marginTop="8dp"
             motion:layout_constraintEnd_toEndOf="@+id/image4"
             motion:layout_constraintStart_toStartOf="@+id/image4"
@@ -362,5 +362,4 @@
         </Constraint>
 
     </ConstraintSet>
-
 </MotionScene>
