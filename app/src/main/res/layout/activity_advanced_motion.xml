@@ -7,19 +7,9 @@
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="256dp">
+        android:layout_height="208dp">
 
-        <com.example.coordinatorlayout.entity.CollapsibleToolbar
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/motionLayout"
-            app:layoutDescription="@xml/scene_01"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:minHeight="50dp"
-            android:background="@drawable/layout_gradient"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
-
-        </com.example.coordinatorlayout.entity.CollapsibleToolbar>
+        <include layout="@layout/collapsing_toolbar_zalopay" />
 
     </com.google.android.material.appbar.AppBarLayout>
 

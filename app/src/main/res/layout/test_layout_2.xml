@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/layout_gradient">
+
+    <EditText
+        android:id="@+id/search_editText2"
+        android:background="@drawable/search_et_custom"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Tìm kiếm"
+        android:inputType="textPersonName"
+        android:paddingStart="32dp"
+        android:textColorHint="#99FFFFFF"
+        android:textSize="13sp"
+
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:scaleX="0.5"
+        android:transformPivotX="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="14dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:tint="#1A000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/scan1"
+
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/search_icon" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/qr1"
+
+        app:layout_constraintBottom_toBottomOf="@+id/image1"
+        app:layout_constraintEnd_toStartOf="@+id/image3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toTopOf="@+id/image1" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/deposit1"
+
+        app:layout_constraintBottom_toBottomOf="@+id/image2"
+        app:layout_constraintEnd_toStartOf="@+id/image4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toTopOf="@+id/image2" />
+
+    <ImageView
+        android:id="@+id/image4"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/withdraw1"
+
+        app:layout_constraintBottom_toBottomOf="@+id/image3"
+        app:layout_constraintEnd_toStartOf="@+id/notification"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toTopOf="@+id/image3" />
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/notification" />
+</androidx.constraintlayout.widget.ConstraintLayout>

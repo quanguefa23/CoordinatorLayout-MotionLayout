@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.coordinatorlayout.entity.CollapsibleToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="208dp"
+    app:layoutDescription="@xml/scene_02"
+    android:background="@drawable/layout_gradient"
+    app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+    android:minHeight="48dp"
+    tools:showPaths="true">
+
+    <EditText
+        android:id="@+id/search_editText"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/search_et_custom"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Tìm kiếm"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:inputType="textPersonName"
+        android:paddingStart="32dp"
+        android:textColorHint="#99FFFFFF"
+        android:textSize="13sp"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/search_icon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:tint="#26000000"
+        app:layout_constraintBottom_toBottomOf="@+id/search_editText"
+        app:layout_constraintStart_toStartOf="@+id/search_editText"
+        app:layout_constraintTop_toTopOf="@+id/search_editText"
+        app:srcCompat="@drawable/search" />
+
+    <ImageView
+        android:id="@+id/notification"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/search_editText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notification" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/scan2"
+        app:altSrc="@drawable/scan1"
+        app:overlay="false"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="72dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/image2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/qr2"
+        app:altSrc="@drawable/qr1"
+        app:overlay="false"
+
+        app:layout_constraintBottom_toBottomOf="@+id/image1"
+        app:layout_constraintEnd_toStartOf="@+id/image3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image1"
+        app:layout_constraintTop_toTopOf="@+id/image1" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/deposit2"
+        app:altSrc="@drawable/deposit1"
+        app:overlay="false"
+
+        app:layout_constraintBottom_toBottomOf="@+id/image2"
+        app:layout_constraintEnd_toStartOf="@+id/image4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image2"
+        app:layout_constraintTop_toTopOf="@+id/image2" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/image4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/withdraw2"
+        app:altSrc="@drawable/withdraw1"
+        app:overlay="false"
+
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/image3"
+        app:layout_constraintTop_toTopOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:maxLines="2"
+        android:text="Quét mã QR"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/image1"
+        app:layout_constraintStart_toStartOf="@+id/image1"
+        app:layout_constraintTop_toBottomOf="@+id/image1" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:text="Mã thanh toán"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/image2"
+        app:layout_constraintStart_toStartOf="@+id/image2"
+        app:layout_constraintTop_toBottomOf="@+id/image2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:text="nạp tiền vào ví"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/image3"
+        app:layout_constraintStart_toStartOf="@+id/image3"
+        app:layout_constraintTop_toBottomOf="@+id/image3" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxLines="2"
+        android:text="rút tiền"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/image4"
+        app:layout_constraintStart_toStartOf="@+id/image4"
+        app:layout_constraintTop_toBottomOf="@+id/image4" />
+
+</com.example.coordinatorlayout.entity.CollapsibleToolbar>

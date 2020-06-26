@@ -36,6 +36,21 @@
                 motion:attributeName="scaleY"
                 motion:customFloatValue="1"/>
         </Constraint>
+        <Constraint
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_editor_absoluteX="32dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp" />
+        <Constraint
+            motion:layout_editor_absoluteY="26dp"
+            android:layout_height="wrap_content"
+            motion:layout_editor_absoluteX="48dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/imageView" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -69,5 +84,13 @@
                 motion:attributeName="scaleY"
                 motion:customFloatValue="0.7"/>
         </Constraint>
+        <Constraint
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            motion:layout_editor_absoluteY="132dp"
+            motion:layout_editor_absoluteX="32dp"
+            android:id="@+id/image1"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp" />
     </ConstraintSet>
 </MotionScene>

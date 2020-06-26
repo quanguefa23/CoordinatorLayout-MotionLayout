@@ -1,14 +1,366 @@
 <?xml version="1.0" encoding="utf-8"?>
-<MotionScene
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
     <Transition
-        motion:constraintSetStart="@layout/start_layout"
-        motion:constraintSetEnd="@layout/end_layout"
-        motion:duration="1000">
-        <OnSwipe
-            motion:touchAnchorId="@+id/button"
-            motion:touchAnchorSide="right"
-            motion:dragDirection="dragRight" />
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:motionInterpolator="linear">
     </Transition>
+
+    <!--START-->
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/image1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="72dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/image2"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintHorizontal_chainStyle="spread_inside"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image2"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+
+            motion:layout_constraintBottom_toBottomOf="@+id/image1"
+            motion:layout_constraintEnd_toStartOf="@+id/image3"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image1"
+            motion:layout_constraintTop_toTopOf="@+id/image1">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image3"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+
+            motion:layout_constraintBottom_toBottomOf="@+id/image2"
+            motion:layout_constraintEnd_toStartOf="@+id/image4"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image2"
+            motion:layout_constraintTop_toTopOf="@+id/image2">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image4"
+            android:layout_height="48dp"
+            android:layout_width="48dp"
+
+            android:layout_marginEnd="32dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/image3"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image3"
+            motion:layout_constraintTop_toTopOf="@+id/image3">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView1"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="@+id/image1"
+            motion:layout_constraintStart_toStartOf="@+id/image1"
+            motion:layout_constraintTop_toBottomOf="@+id/image1">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView2"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="@+id/image2"
+            motion:layout_constraintStart_toStartOf="@+id/image2"
+            motion:layout_constraintTop_toBottomOf="@+id/image2">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView3"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="@+id/image3"
+            motion:layout_constraintStart_toStartOf="@+id/image3"
+            motion:layout_constraintTop_toBottomOf="@+id/image3">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView4"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            motion:layout_constraintEnd_toEndOf="@+id/image4"
+            motion:layout_constraintStart_toStartOf="@+id/image4"
+            motion:layout_constraintTop_toBottomOf="@+id/image4">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/search_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/search_editText"
+            motion:layout_constraintStart_toStartOf="@+id/search_editText"
+            motion:layout_constraintTop_toTopOf="@+id/search_editText" >
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1" />
+            <CustomAttribute
+                motion:attributeName="colorFilter"
+                motion:customColorValue="#1A000000"/>
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/notification"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="20dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/search_editText"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="72dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+            <CustomAttribute
+                motion:attributeName="width"
+                motion:customIntegerValue="100" />
+        </Constraint>
+
+    </ConstraintSet>
+
+    <!--END-->
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/image1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toStartOf="@+id/image2"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/search_icon">
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image2"
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+
+            motion:layout_constraintBottom_toBottomOf="@+id/image1"
+            motion:layout_constraintEnd_toStartOf="@+id/image3"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image1"
+            motion:layout_constraintTop_toTopOf="@+id/image1" >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image3"
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+
+            motion:layout_constraintBottom_toBottomOf="@+id/image2"
+            motion:layout_constraintEnd_toStartOf="@+id/image4"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image2"
+            motion:layout_constraintTop_toTopOf="@+id/image2"  >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/image4"
+            android:layout_height="32dp"
+            android:layout_width="32dp"
+
+            motion:layout_constraintBottom_toBottomOf="@+id/image3"
+            motion:layout_constraintEnd_toStartOf="@+id/notification"
+            motion:layout_constraintHorizontal_bias="0.5"
+            motion:layout_constraintStart_toEndOf="@+id/image3"
+            motion:layout_constraintTop_toTopOf="@+id/image3" >
+            <CustomAttribute
+                motion:attributeName="crossfade"
+                motion:customFloatValue="1" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView1"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            motion:layout_constraintEnd_toEndOf="@+id/image1"
+            motion:layout_constraintStart_toStartOf="@+id/image1"
+            motion:layout_constraintTop_toBottomOf="@+id/image1">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView2"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+
+            motion:layout_constraintEnd_toEndOf="@+id/image2"
+            motion:layout_constraintStart_toStartOf="@+id/image2"
+            motion:layout_constraintTop_toBottomOf="@+id/image2">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView3"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            motion:layout_constraintEnd_toEndOf="@+id/image3"
+            motion:layout_constraintStart_toStartOf="@+id/image3"
+            motion:layout_constraintTop_toBottomOf="@+id/image3">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/textView4"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+
+            motion:layout_constraintEnd_toEndOf="@+id/image4"
+            motion:layout_constraintStart_toStartOf="@+id/image4"
+            motion:layout_constraintTop_toBottomOf="@+id/image4">
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="0" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/search_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="14dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                motion:attributeName="scaleX"
+                motion:customFloatValue="1.5" />
+            <CustomAttribute
+                motion:attributeName="scaleY"
+                motion:customFloatValue="1.5" />
+            <CustomAttribute
+                motion:attributeName="colorFilter"
+                motion:customColorValue="#00000000" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/notification"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="8dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent">
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/search_editText"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="4dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="width"
+                motion:customIntegerValue="0" />
+        </Constraint>
+
+    </ConstraintSet>
+
 </MotionScene>
